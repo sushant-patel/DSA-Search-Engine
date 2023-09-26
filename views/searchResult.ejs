@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%>
+
+    <div class="quesContainer">
+        <%  for(let i = 0; i < resp.length && i < 10; i++){ %>
+
+            <div class="question">
+                <div class="title"><h3><%=resp[i].title%></h3></div>
+                <div class="url">
+                <a href="<%=resp[i].url%>"><%=resp[i].url%></a>
+                </div>
+                <div class="body">
+                    <p>
+                        <%=resp[i].statement.substr(0, 50)%>
+                        <a href="/question/<%=resp[i].documentNum%>"><b>      ...Read More</b></a>
+                    </p>
+                </div>
+            </div>
+
+        <% } %>
+
+    </div>
+    
+</body>
+</html>
